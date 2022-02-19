@@ -1,0 +1,8 @@
+.main{
+    flex: 1;
+}
+
+.video {
+    height: 500px;
+    object-fit: cover;
+}

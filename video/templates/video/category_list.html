@@ -1,0 +1,27 @@
+{% extends "video/base.html" %}
+
+{% block content %}
+
+{% if user.is_authenticated %}
+
+<div class="container">
+    <br>
+    <h1>Add Categories..</h1>
+    <br><br>
+
+    <div class="form-group">
+        <form method="POST">
+            {% csrf_token %}
+
+            {{ form.as_p }}
+            <br>
+            <button class="btn btn-secondary">Add</button>
+        </form>
+    </div>
+    {% else %}
+    YOU'RE NOT ALLOWED HERE!!(and you know it ...)
+</div>
+{% endif %}
+
+
+{% endblock %}

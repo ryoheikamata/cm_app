@@ -1,0 +1,39 @@
+{% extends 'video/base.html' %}
+{% load widget_tweaks %}
+
+{% block content %}
+<div class="container">
+    <div class="my-4">
+        <h2>NEW POST</h2>
+    </div>
+
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="form-group">
+            <label>Title</label >
+            {{ form.caption }}
+        </div>
+        <br>
+
+        <div class="form-group">
+            <label>Category</label>
+            {{ form.category }}
+        </div>
+        <br>
+
+        <div class="form-group">
+            <label>Video</label>
+            {{ form.video }}
+        </div>
+        <br>
+
+        <div class="form-group">
+            <label>content</label>
+            {{ form.content }}
+        </div>
+        <br>
+
+        <button class="btn btn-dark" type="submit">POST</button>
+    </form>
+</div>
+{% endblock %}

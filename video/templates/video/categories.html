@@ -1,0 +1,28 @@
+{% extends "video/base.html" %}
+
+{% block content %}
+<br>
+<div class="container">
+    <h1>{{ category }}</h1>
+
+    {% for post in category_post %}
+
+    <h2 class="text-center">{{ post.caption }}<small><span class="small">-<a
+            href="{% url 'video:category' post.category %}">{{ post.category }}</a></span></small></h2>
+
+    <video class="video" controls="controls" width="100%">
+        {% if post.video %}
+        <source src="{{ post.video.url }}" type="video/mp4">
+        {% endif %}
+    </video>
+    <h5 class="mt-2 mb-5">{{ post.content | safe | linebreaksbr | urlize }}</h5>
+    <div class="">{{ post.created | date }} by {{ post.author }}</div>
+    <a href="{% url 'video:video_detail' post.id %}">
+        <button class="btn btn-secondary btn-lg">詳細</button>
+    </a>
+    <hr>
+    {% endfor %}
+
+    <br>
+</div>
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends 'video/base.html' %}
+
+{% block content %}
+<div class="container">
+    <h2 class="my-4">{{ post_video.caption }} </h2>
+    <p>{{ post_video.category }}</p>
+    <video class="embed-responsive embed-responsive-16by9 mb-3" controls="controls" width="100%">
+        {% if post_video.video %}
+        <source src="{{ post_video.video.url }}" type="video/mp4">
+        {% endif %}
+    </video>
+    {% if user.is_authenticated %}
+    <div class="d-flex mb-5">
+        <a href="{% url 'video:post_edit' post_video.id %}" class="btn btn-warning">編集</a>
+
+        <a href="javascript:void(0);" onclick="window.history.back();" class="btn btn-dark">戻る</a>
+
+        <a href="{% url 'video:post_delete' post_video.id %}" class="btn btn-danger">削除</a>
+    </div>
+
+{% endif %}
+
+<p>{{ post_video.content | safe | linebreaksbr | urlize }}</p>
+
+<p class="mb-3">{{ post_video.created }} by {{ post_video.author }}</p>
+
+</div>
+{% endblock %}% 

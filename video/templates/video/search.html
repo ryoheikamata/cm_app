@@ -1,0 +1,21 @@
+{% extends "video/base.html" %}
+
+{% block content %}
+
+
+<br>
+
+{% if searched %}
+<!--    <h1>You Searched For...{{ searched }} </h1>-->
+    <br>
+    <br>
+        {% for video in videos %}
+        <a href="{% url 'video:video_detail' video.id %}">{{ video }}</a><br>
+        {% endfor %}
+{% else %}
+
+<h1> Hey! you forget to Search For ...</h1>
+
+{% endif %}
+
+{% endblock %}

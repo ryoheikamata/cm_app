@@ -1,0 +1,19 @@
+{% extends "video/base.html" %}
+{% load widget_tweaks %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <br>
+            <h2>Logout</h2>
+            <form action="." method="post">
+                {% csrf_token %}
+                <br>
+                <p>ログアウトしました</p>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

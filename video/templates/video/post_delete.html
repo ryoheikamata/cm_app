@@ -1,0 +1,15 @@
+{% extends 'video/base.html' %}
+
+{% block content %}
+
+<div class="container">
+    <h2 class="my-4">{{ post_data.caption }}</h2>
+    <hr>
+
+    <h5 class="my-4">削除します</h5>
+    <form method="post">
+        {% csrf_token %}
+        <button class="btn btn-danger">Delete</button>
+    </form>
+</div>
+{% endblock %}

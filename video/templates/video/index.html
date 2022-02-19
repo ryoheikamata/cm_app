@@ -1,0 +1,73 @@
+{% extends 'video/base.html' %}
+
+{% block content %}
+<div class="container">
+    <div class="my-4">
+        <h1 class="display-1">Commercial Share Space</h1>
+        <h5>表示は投稿順。<br>
+            クライアント名、代理店、制作会社、監督、AD、HM、STYなどスタッフなど含め詳細へ登録<br>
+
+        </h5>
+        <hr>
+    </div>
+
+    <div class="d-flex">
+        <div class="col-md-10">
+            {% csrf_token %}
+            <br>
+            {% for x in videos %}
+            <h2 class="text-center">{{ x.caption }}<small><span class="small">-<a href="{% url 'video:category' x.category %}">{{ x.category }}</a></span></small></h2>
+
+            <video class="video" controls="controls" width="100%">
+                {% if x.video %}
+                <source src="{{ x.video.url }}" type="video/mp4">
+                {% endif %}
+            </video>
+            <h5 class="mt-2 mb-5">{{ x.content | truncatechars_html:50 | safe | linebreaksbr | urlize }}</h5>
+            <div class="">{{ x.created | date }} by {{ x.author }}</div>
+            <a href="{% url 'video:video_detail' x.id %}">
+                <button class="btn btn-secondary btn-lg">詳細</button>
+            </a>
+            <hr>
+            <br>
+            {% endfor %}
+        </div>
+
+        <div class="col-md-3 mx-5">
+            <div class="card">
+                <h5 class="card-header bg-dark text-white">Category</h5>
+                <div class="card-body">
+                    <div class="row">
+                        {% for category in category_data %}
+                        <div class="col-md-6">
+                            <ul class="list-unstyled">
+                                {% csrf_token %}
+                                <li>
+                                    <a href="{% url 'video:category' category %}" method="GET">{{ category.name }}</a>
+                                </li>
+                            </ul>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="pagination">
+        <span class="step-links">
+            {% if videos.has_previous %}
+                <a href="?page=1">&laquo; first</a>
+                <a href="?page={{ videos.previous_page_number }}">previous</a>
+            {% endif %}
+             Page {{ videos.number }} of {{ videos.paginator.num_pages }}.
+            {% if videos.has_next %}
+                <a href="?page={{ videos.next_page_number }}">next</a>
+                <a href="?page={{ videos.paginator.num_pages }}">last &raquo;</a>
+            {% endif %}
+        </span>
+    </div>
+</div>
+
+<br>
+{% endblock %}

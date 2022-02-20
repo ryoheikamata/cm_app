@@ -7,3 +7,57 @@
     object-fit: cover;
 }
 
+.logout-bt {
+    background-color: black;
+    color: white;
+    font-size: 20px;
+}
+
+.logout-bt:hover {
+    background-color: yellow;
+    font-size: 20px;
+    border-color: yellow;
+}
+
+.login-bt {
+    font-size: 20px;
+}
+.login-bt:hover {
+    background-color: mediumpurple;
+    border-color: mediumpurple;
+    font-size: 20px;
+}
+
+.signup-bt {
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    border-color: gold;
+}
+.signup-bt:hover {
+    background-color: gold;
+    color: black;
+
+}
+
+#newpost-bt {
+    font-size: 20px;
+    border-color: magenta;
+}
+#newpost-bt:hover {
+    cursor: pointer;
+    color: white;
+    background-color: magenta;
+    font-size: 20px;
+}
+
+.serch{
+    background-color: black;
+    color: greenyellow;
+    font-size: 20px;
+}
+
+.serch:hover {
+    background-color: greenyellow;
+    color: black;
+}

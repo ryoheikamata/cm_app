@@ -131,4 +131,5 @@ dmypy.json
 media/
 /video/21
 /video/22
+migrations
 

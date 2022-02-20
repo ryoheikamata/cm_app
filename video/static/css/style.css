@@ -1,5 +1,14 @@
+.toppage-bg-color {
+    background-color: #b8b8f6;
+}
+
 .main{
     flex: 1;
+}
+
+#top-copy-text {
+    font-size: 100px;
+
 }
 
 .video {
@@ -7,3 +16,43 @@
     object-fit: cover;
 }
 
+.new-post:hover {
+    background-color: deepskyblue;
+    border-color: #4ac1f7;
+    color: white;
+    font-size: 20px;
+}
+
+.logout-bt {
+    background-color: black;
+    border-color: #f60209;
+    color: white;
+}
+
+.logout-bt:hover {
+    background-color: red;
+    color: white;
+    font-size: 20px;
+}
+.search-color {
+    color: white;
+    border-color: #03f859;
+}
+.search-color:hover{
+    background-color: greenyellow;
+    color: white;
+    font-size: 20px;
+}
+
+.signup-bt {
+    background-color: black;
+    color: white;
+    font-size: 20px;
+}
+.signup-bt:hover {
+    background-color: yellow;
+}
+
+.category_card_head{
+    background-color: magenta;
+}

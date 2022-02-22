@@ -132,4 +132,5 @@ media/
 /video/21
 /video/22
 migrations
+.DS_Store
 

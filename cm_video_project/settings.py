@@ -132,6 +132,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 
+STATICFILES_DIRS = [ BASE_DIR / 'static']
 STATIC_URL = '/static/'
 STATIC_ROOT = '/var/www/video/static'
 # STATICFILES_DIRS = (

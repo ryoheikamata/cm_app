@@ -133,7 +133,7 @@ USE_TZ = True
 
 
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'collected_static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'video/collected_static')
 
 STATICFIELS_DIRS = [
     os.path.join(BASE_DIR, 'static'),

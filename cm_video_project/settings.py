@@ -134,7 +134,7 @@ USE_TZ = True
 
 STATICFIELS_DIRS = (os.path.join(BASE_DIR, '/static'),)
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = 'cm_video/cm_app/static'
 
 
 # Default primary key field type

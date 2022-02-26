@@ -19,7 +19,6 @@ import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
 env = environ.Env()
 env.read_env(os.path.join(BASE_DIR, '.env'))
 SECRET_KEY = env('SECRET_KEY')
@@ -131,17 +130,21 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
-
-
-STATIC_ROOT = os.path.join(BASE_DIR, 'video/collected_static')
-
+# 個別のアプリケーションではなく、トップページに表示する画像などを
+# 保管する任意の場所を、Djangoに探すように指定するのがSTATICFILES_DIRS。
 STATICFIELS_DIRS = [
-    os.path.join(BASE_DIR, 'collected_static'),
+    os.path.join(BASE_DIR, 'video'),
     ]
 
-STATIC_URL = 'collected_static/'
-# STATIC_ROOT = 'static'
+# デプロイする際、静的ファイルの置き場所を一つの場所に集めてあげる必要がある。
+# collectstaticコマンド。
+# 集める場所をsettings.pyに設定する必要がある。
+# (プロジェクト直下、"static"というフォルダを指定。)
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
+# デプロイ環境で、{% static 'main.css' %}などのDjangoテンプレートが
+# 読みに行く場所をSTATIC_URLで指定
+STATIC_URL = '/static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field

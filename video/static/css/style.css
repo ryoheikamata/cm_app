@@ -7,6 +7,7 @@
     object-fit: cover;
 }
 
+/*headver css*/
 .logout-bt {
     background-color: black;
     color: white;
@@ -60,4 +61,11 @@
 .serch:hover {
     background-color: greenyellow;
     color: black;
+}
+
+/*index.html*/
+#toptitle {
+    padding-top: 10px;
+    font-size: 100px;
+    font-weight: bold;
 }

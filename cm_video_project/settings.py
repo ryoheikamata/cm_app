@@ -140,7 +140,7 @@ STATICFIELS_DIRS = [
 # collectstaticコマンド。
 # 集める場所をsettings.pyに設定する必要がある。
 # (プロジェクト直下、"static"というフォルダを指定。)
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'video/static')
 
 # デプロイ環境で、{% static 'main.css' %}などのDjangoテンプレートが
 # 読みに行く場所をSTATIC_URLで指定

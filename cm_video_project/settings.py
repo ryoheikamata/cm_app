@@ -132,9 +132,9 @@ USE_TZ = True
 
 # 個別のアプリケーションではなく、トップページに表示する画像などを
 # 保管する任意の場所を、Djangoに探すように指定するのがSTATICFILES_DIRS。
-# STATICFIELS_DIRS = [
-#     BASE_DIR / 'video/static',
-#     ]
+STATICFIELS_DIRS = [
+    os.path.join(BASE_DIR, 'static')
+]
 
 # デプロイする際、静的ファイルの置き場所を一つの場所に集めてあげる必要がある。
 # collectstaticコマンド。

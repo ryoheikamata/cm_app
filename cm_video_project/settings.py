@@ -142,7 +142,7 @@ STATICFIELS_DIRS = [
 # (プロジェクト直下、"static"というフォルダを指定。)
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
-# デプロイ環境で、{% static 'main.css' %}などのDjangoテンプレートが
+# デプロイ環境で、{% static 'main.video' %}などのDjangoテンプレートが
 # 読みに行く場所をSTATIC_URLで指定
 STATIC_URL = '/static/'
 

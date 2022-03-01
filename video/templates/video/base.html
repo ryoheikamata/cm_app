@@ -48,14 +48,14 @@
                 <a class="" href="{% url 'video:logout' %}">
                     <button type="button" class="btn btn-warning me-3 logout-bt">Logout</button>
                 </a>
+                <a href="{% url 'video:signup' %}">
+                    <button type="button" class="btn btn-warning me-3 signup-bt">Signup</button>
+                </a>
             </div>
             {% else %}
             <div class="text-end">
                 <a href="{% url 'video:login' %}">
                     <button type="button" class="btn btn-outline-light me-3 login-bt">Login</button>
-                </a>
-                <a href="{% url 'video:signup' %}">
-                    <button type="button" class="btn btn-warning me-3 signup-bt">Signup</button>
                 </a>
             </div>
             {% endif %}

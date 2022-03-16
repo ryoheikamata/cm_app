@@ -5,8 +5,7 @@
     <div class="">
         <h1 class="display-1" id="toptitle">Commercial Share Space</h1>
         <h5>表示は投稿順。<br>
-            クライアント名、代理店、制作会社、監督、AD、HM、STYなどスタッフなど含め詳細へ登録<br>
-
+            企業名、商品名、クライアント名、代理店、制作会社、監督、AD、HM、STYなど含め詳細へ記載<br>
         </h5>
         <hr>
     </div>
@@ -16,7 +15,7 @@
             {% csrf_token %}
             <br>
             {% for x in videos %}
-            <h2 class="text-center">{{ x.caption }}<small><span class="small">-<a href="{% url 'video:category' x.category %}">{{ x.category }}</a></span></small></h2>
+            <h2 class="text-center" id="video-titele-text">{{ x.caption }}<small><span class="small" id="video-titele-text">-<a href="{% url 'video:category' x.category %}">{{ x.category }}</a></span></small></h2>
 
             <video class="video" controls="controls" width="100%">
                 {% if x.video %}
@@ -33,9 +32,9 @@
             {% endfor %}
         </div>
 
-        <div class="col-md-3 mx-2">
+        <div class="col-md-3 mx-3">
             <div class="card">
-                <h5 class="card-header bg-dark text-white">Category</h5>
+                <h5 class="card-header" id="index-category-list-title">カテゴリー</h5>
                 <div class="card-body">
                     <div class="row">
                         {% for category in category_data %}
@@ -43,7 +42,7 @@
                             <ul class="list-unstyled">
                                 {% csrf_token %}
                                 <li>
-                                    <a href="{% url 'video:category' category %}" method="GET">{{ category.name }}</a>
+                                    <a href="{% url 'video:category' category %}" method="GET" id="index-category-list-name">{{ category.name }}</a>
                                 </li>
                             </ul>
                         </div>

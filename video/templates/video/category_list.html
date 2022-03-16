@@ -6,16 +6,16 @@
 
 <div class="container">
     <br>
-    <h1>Add Categories..</h1>
-    <br><br>
-
+    <h1 class="addcategory-toptitle">カテゴリー追加</h1>
+    <br>
+    <br>
     <div class="form-group">
         <form method="POST">
             {% csrf_token %}
 
             {{ form.as_p }}
             <br>
-            <button class="btn btn-secondary">Add</button>
+            <button class="btn btn-secondary" id="addcategory-btn">カテゴリ追加</button>
         </form>
     </div>
     {% else %}

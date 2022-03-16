@@ -1,0 +1,116 @@
+.main{
+    flex: 1;
+}
+
+.video {
+    height: 500px;
+    object-fit: cover;
+}
+
+/*headver video*/
+.logout-bt {
+    background-color: black;
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.logout-bt:hover {
+    background-color: #ff0063;
+    font-size: 25px;
+    border-color: red;
+}
+
+.login-bt {
+    font-size: 25px;
+    font-weight: bold;
+}
+.login-bt:hover {
+    background-color: mediumpurple;
+    border-color: mediumpurple;
+    font-size: 25px;
+}
+
+.signup-bt {
+    background-color: black;
+    color: white;
+    font-size: 25px;
+    border-color: yellow;
+    font-weight: bold;
+}
+.signup-bt:hover {
+    background-color: yellow;
+    color: black;
+}
+
+#newpost-bt {
+    font-size: 25px;
+    font-weight: bold;
+    border-color: magenta;
+}
+
+#newpost-bt:hover {
+    color: white;
+    background-color: magenta;
+    font-size: 25px;
+}
+.serch{
+    background-color: black;
+    color: greenyellow;
+    font-size: 25px;
+}
+
+.serch:hover {
+    background-color: greenyellow;
+    color: black;
+}
+
+/*base.html*/
+#header-text-size {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+/*index.html*/
+#toptitle {
+    padding-top: 10px;
+    font-size: 90px;
+    font-weight: bold;
+}
+#video-titele-text {
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#index-category-list-title {
+    background-color: rgba(0, 140, 255, 0.78);
+    color: white;
+    text-align: center;
+}
+
+#index-category-list-name {
+    color: black;
+    font-weight: bold;
+    text-decoration:none;
+}
+
+/*category_list.html*/
+.addcategory-toptitle{
+    margin-top: 10px;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+#addcategory-btn {
+    color: red;
+    font-size: 20px;
+    background-color: white;
+    border-color: red;
+    font-weight: bold;
+}
+#addcategory-btn:hover {
+    background-color: red;
+    color: white;
+}
+
+

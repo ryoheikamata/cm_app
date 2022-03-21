@@ -9,16 +9,14 @@
         <source src="{{ post_video.video.url }}" type="video/mp4">
         {% endif %}
     </video>
+
     {% if user.is_authenticated %}
     <div class="d-flex mb-5">
-        <a href="{% url 'video:post_edit' post_video.id %}" class="btn btn-warning">編集</a>
-
-        <a href="javascript:void(0);" onclick="window.history.back();" class="btn btn-dark">戻る</a>
-
-        <a href="{% url 'video:post_delete' post_video.id %}" class="btn btn-danger">削除</a>
+        <a href="{% url 'video:post_edit' post_video.id %}" class="btn m-1" id="detail-edit-btn">編集</a>
+        <a href="{% url 'video:post_delete' post_video.id %}" class="btn btn-danger m-1" id="delete-btn">削除</a>
+        <a href="javascript:void(0);" onclick="window.history.back();" class="btn btn-dark m-1" id="back-btn">戻る</a>
     </div>
-
-{% endif %}
+    {% endif %}
 
 <p>{{ post_video.content | safe | linebreaksbr | urlize }}</p>
 

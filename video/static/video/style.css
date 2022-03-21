@@ -114,3 +114,35 @@
 }
 
 
+/* detail page */
+#detail-edit-btn {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: blueviolet;
+    padding: 10px 25px;
+}
+
+#detail-edit-btn:hover {
+    background-color: #b57cea;
+}
+
+#back-btn {
+    background-color: lightskyblue;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 25px;
+}
+#back-btn:hover {
+    background-color: rgba(206, 236, 248, 0.78);
+}
+
+#delete-btn{
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 25px;
+}
+
+#delete-btn:hover {
+    background-color: #ef94a5;
+}
